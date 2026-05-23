@@ -90,7 +90,7 @@ LANGUAGES = {
         "tab_rec": "🎯 Ideální doporučení",
         "tab_an": "📊 Tržní analýza",
         "tab_comp": "⚔️ Srovnávací modul",
-        "no_results": "💡 Žádná zařízení nevyhovují stanoveným filtrům rozpočtu nebo značek.",
+        "no_results": "💡 Žáda zařízení nevyhovují stanoveným filtrům rozpočtu nebo značek.",
         "found_models": "🔍 Nalezené a analyzované modely: ",
         "match_profile": "Celková shoda: ",
         "value_idx": "Index výhodnosti",
@@ -108,7 +108,7 @@ LANGUAGES = {
 }
 
 # ==========================================
-# 2. ПЕРЕВІРЕНА БАЗА КАРТИНОК (GSM-CDN СТАНДАРТ)
+# 2. ОДНОРІДНА СТАБІЛЬНА БАЗА КАРТИНОК CDN
 # ==========================================
 phones_db = [
     # APPLE
@@ -169,11 +169,9 @@ st.set_page_config(page_title="Smart Phone Picker Pro", page_icon="⚡", layout=
 
 st.markdown("""
 <style>
-    /* ПОВНЕ ПРИХОВУВАННЯ ВОТЕРМАРКИ, ХЕДЕРА ТА СИСТЕМНОГО МЕНЮ STREAMLIT */
-    header {visibility: hidden;}
-    .stAppHeader {visibility: hidden;}
+    /* ТОЧКОВЕ ПРИХОВУВАННЯ ВОТЕРМАРКИ ТА МЕНЮ (СТРІЛКА БІЧНОЇ ПАНЕЛІ ЗАЛИШАЄТЬСЯ ЖИВОЮ) */
+    div[data-testid="stHeaderActionElements"] {visibility: hidden;}
     footer {visibility: hidden;}
-    #MainMenu {visibility: hidden;}
     div[data-testid="stStatusWidget"] {visibility: hidden;}
 
     /* Кастомна стилізація карток */
@@ -211,7 +209,7 @@ st.title(t["title"])
 st.markdown(t["subtitle"])
 st.write("---")
 
-# Бічна панель фільтрів
+# Бічна панель
 st.sidebar.header(t["sidebar_header"])
 budget = st.sidebar.slider(t["budget"], min_value=100, max_value=1500, value=800, step=50)
 
@@ -258,7 +256,7 @@ for phone in phones_db:
     phone_entry['value_index'] = value_index
     processed_phones.append(phone_entry)
 
-# Застосування сортування
+# Сортування
 if sort_option == t["sort_options"][0]:
     processed_phones.sort(key=lambda x: x['match'], reverse=True)
 elif sort_option == t["sort_options"][1]:
@@ -293,7 +291,6 @@ with tab_recommendations:
             if phone['performance'] >= 95:
                 badges_html += f'<span class="badge badge-gaming">🎮 {"ЕКСТРЕМАЛЬНА ПОТУЖНІСТЬ" if lang_code=="UA" else "EXTREME POWER" if lang_code=="EN" else "EXTRÉMNÍ VÝKON"}</span>'
 
-            # Контейнер картки з нативним викликом st.image (працює стабільно по всьому CDN)
             with st.container():
                 st.markdown('<div class="phone-card">', unsafe_allow_html=True)
                 col_img, col_info = st.columns([2, 8])
@@ -316,7 +313,6 @@ with tab_recommendations:
                     """, unsafe_allow_html=True)
                 st.markdown('</div>', unsafe_allow_html=True)
             
-            # Повзунки прогресу та детальні мікро-метрики
             col_progress, col_metrics = st.columns([4, 6])
             with col_progress:
                 st.write(f"{t['match_profile']}**{phone['match']}%**")
@@ -357,7 +353,7 @@ with tab_analytics:
     else:
         st.warning(t["no_results"])
 
-# Вкладка 3: Модуль порівняння моделей лоб-в-лоб
+# Вкладка 3: Модуль порівняння
 with tab_comparison:
     st.subheader(t["comp_title"])
     st.markdown(t["comp_desc"])
