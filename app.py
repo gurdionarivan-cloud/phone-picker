@@ -31,9 +31,9 @@ LANGUAGES = {
         "chart_title": "📊 Порівняльний аналіз розподілу ціни та якості",
         "chart_desc": "Ця матриця допомагає візуально виявити аутсайдерів та пристрої з аномально високою вигодою.",
         "chart_caption": "ℹ️ Розмір точки відображає її індекс вигоди (Ціна/Якість). Що вища і лівіша точка — то вигідніший пристрій.",
-        "comp_title": "⚔️ Tabular Comparison of Selected Models",
+        "comp_title": "⚔️ Табличне порівняння обраних моделей",
         "comp_desc": "Познач пристрої, які тебе зацікавили, щоб звести їх характеристики в єдину порівняльну таблицю.",
-        "comp_select": "Обери +/- пристрої:",
+        "comp_select": "Обери моделі для детального порівняння:",
         "comp_empty": "Будь ласка, обери хоча б один або два смартфони у полі вище.",
         "m_cam": "📸 Камера", "m_bat": "🔋 Батарея", "m_perf": "🚀 Швидкість", "m_disp": "📺 Екран", "m_design": "💎 Корпус",
         "chart_x": "Ціна ($)", "chart_y": "Рейтинг відповідності (%)", "chart_size": "Індекс Ціна/Якість", "chart_model": "Модель",
@@ -108,41 +108,41 @@ LANGUAGES = {
 }
 
 # ==========================================
-# 2. СТАБІЛЬНА БАЗА ДАНИХ (БЕЗ БЛОКУВАННЯ КАРТИНОК)
+# 2. АКТУАЛІЗОВАНА СТАБІЛЬНА БАЗА ДАНИХ (ПЕРЕВІРЕНІ URL)
 # ==========================================
 phones_db = [
     # APPLE
-    {"brand": "Apple", "model": "iPhone 16 Pro Max", "price": 1250, "camera": 98, "battery": 90, "performance": 98, "display": 99, "design": 98, "img": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"},
-    {"brand": "Apple", "model": "iPhone 16 Pro", "price": 1050, "camera": 97, "battery": 85, "performance": 98, "display": 98, "design": 98, "img": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg"},
-    {"brand": "Apple", "model": "iPhone 16", "price": 820, "camera": 87, "battery": 80, "performance": 89, "display": 85, "design": 93, "img": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg"},
-    {"brand": "Apple", "model": "iPhone 15", "price": 680, "camera": 84, "battery": 78, "performance": 83, "display": 84, "design": 90, "img": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg"},
+    {"brand": "Apple", "model": "iPhone 16 Pro Max", "price": 1250, "camera": 98, "battery": 90, "performance": 98, "display": 99, "design": 98, "img": "https://upload.wikimedia.org/wikipedia/commons/e/e4/IPhone_16_Pro_Max_Vector.svg"},
+    {"brand": "Apple", "model": "iPhone 16 Pro", "price": 1050, "camera": 97, "battery": 85, "performance": 98, "display": 98, "design": 98, "img": "https://upload.wikimedia.org/wikipedia/commons/e/e4/IPhone_16_Pro_Max_Vector.svg"},
+    {"brand": "Apple", "model": "iPhone 16", "price": 820, "camera": 87, "battery": 80, "performance": 89, "display": 85, "design": 93, "img": "https://upload.wikimedia.org/wikipedia/commons/8/82/IPhone_16_Vector.svg"},
+    {"brand": "Apple", "model": "iPhone 15", "price": 680, "camera": 84, "battery": 78, "performance": 83, "display": 84, "design": 90, "img": "https://upload.wikimedia.org/wikipedia/commons/d/df/IPhone_15_Vector.svg"},
     
     # SAMSUNG
-    {"brand": "Samsung", "model": "Galaxy S26 Ultra", "price": 1350, "camera": 99, "battery": 94, "performance": 99, "display": 100, "design": 97, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra___.jpg"},
-    {"brand": "Samsung", "model": "Galaxy S26+", "price": 1000, "camera": 92, "battery": 89, "performance": 95, "display": 97, "design": 94, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-plus____.jpg"},
-    {"brand": "Samsung", "model": "Galaxy S25", "price": 750, "camera": 89, "battery": 82, "performance": 93, "display": 95, "design": 92, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24__.jpg"},
-    {"brand": "Samsung", "model": "Galaxy A55 5G", "price": 370, "camera": 75, "battery": 89, "performance": 71, "display": 86, "design": 83, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg"},
-    {"brand": "Samsung", "model": "Galaxy A35 5G", "price": 270, "camera": 66, "battery": 88, "performance": 62, "display": 81, "design": 78, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a35.jpg"},
-    {"brand": "Samsung", "model": "Galaxy A16 5G", "price": 180, "camera": 48, "battery": 86, "performance": 45, "display": 72, "design": 60, "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a16-5g.jpg"},
+    {"brand": "Samsung", "model": "Galaxy S26 Ultra", "price": 1350, "camera": 99, "battery": 94, "performance": 99, "display": 100, "design": 97, "img": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Galaxy_S24_Ultra_Vector.svg"},
+    {"brand": "Samsung", "model": "Galaxy S26+", "price": 1000, "camera": 92, "battery": 89, "performance": 95, "display": 97, "design": 94, "img": "https://upload.wikimedia.org/wikipedia/commons/0/07/Galaxy_S24_Base_and_Plus_Vector.svg"},
+    {"brand": "Samsung", "model": "Galaxy S25", "price": 750, "camera": 89, "battery": 82, "performance": 93, "display": 95, "design": 92, "img": "https://upload.wikimedia.org/wikipedia/commons/0/07/Galaxy_S24_Base_and_Plus_Vector.svg"},
+    {"brand": "Samsung", "model": "Galaxy A55 5G", "price": 370, "camera": 75, "battery": 89, "performance": 71, "display": 86, "design": 83, "img": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Galaxy_A54_Vector.svg"},
+    {"brand": "Samsung", "model": "Galaxy A35 5G", "price": 270, "camera": 66, "battery": 88, "performance": 62, "display": 81, "design": 78, "img": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Galaxy_A54_Vector.svg"},
+    {"brand": "Samsung", "model": "Galaxy A16 5G", "price": 180, "camera": 48, "battery": 86, "performance": 45, "display": 72, "design": 60, "img": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Galaxy_A14_Vector.svg"},
     
     # MOTOROLA
-    {"brand": "Motorola", "model": "Edge 50 Ultra", "price": 890, "camera": 93, "battery": 86, "performance": 94, "display": 97, "design": 99, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"},
-    {"brand": "Motorola", "model": "Edge 50 Pro", "price": 550, "camera": 87, "battery": 85, "performance": 85, "display": 95, "design": 96, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-pro.jpg"},
-    {"brand": "Motorola", "model": "Edge 50 Fusion", "price": 340, "camera": 81, "battery": 90, "performance": 73, "display": 91, "design": 92, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-fusion.jpg"},
-    {"brand": "Motorola", "model": "Moto G85 5G", "price": 250, "camera": 73, "battery": 92, "performance": 66, "display": 88, "design": 86, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g85.jpg"},
-    {"brand": "Motorola", "model": "Moto G55 5G", "price": 190, "camera": 68, "battery": 93, "performance": 60, "display": 79, "design": 78, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g55.jpg"},
-    {"brand": "Motorola", "model": "Moto G35 5G", "price": 140, "camera": 50, "battery": 91, "performance": 51, "display": 74, "design": 72, "img": "https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g35.jpg"},
+    {"brand": "Motorola", "model": "Edge 50 Ultra", "price": 890, "camera": 93, "battery": 86, "performance": 94, "display": 97, "design": 99, "img": "https://motorolaua.com/files/products/motorola-edge-50-ultra-8.1000x.png"},
+    {"brand": "Motorola", "model": "Edge 50 Pro", "price": 550, "camera": 87, "battery": 85, "performance": 85, "display": 95, "design": 96, "img": "https://motorolaua.com/files/products/motorola-edge-50-pro-black-1.1000x.png"},
+    {"brand": "Motorola", "model": "Edge 50 Fusion", "price": 340, "camera": 81, "battery": 90, "performance": 73, "display": 91, "design": 92, "img": "https://motorolaua.com/files/products/motorola-edge-50-fusion-hot-pink-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G85 5G", "price": 250, "camera": 73, "battery": 92, "performance": 66, "display": 88, "design": 86, "img": "https://motorolaua.com/files/products/motorola-moto-g85-5g-grey-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G55 5G", "price": 190, "camera": 68, "battery": 93, "performance": 60, "display": 79, "design": 78, "img": "https://motorolaua.com/files/products/moto-g54-power-edition-blue-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G35 5G", "price": 140, "camera": 50, "battery": 91, "performance": 51, "display": 74, "design": 72, "img": "https://motorolaua.com/files/products/moto-g14-steel-gray-1.1000x.png"},
     
     # ONEPLUS
-    {"brand": "OnePlus", "model": "13", "price": 820, "camera": 94, "battery": 97, "performance": 99, "display": 98, "design": 93, "img": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-13.jpg"},
+    {"brand": "OnePlus", "model": "13", "price": 820, "camera": 94, "battery": 97, "performance": 99, "display": 98, "design": 93, "img": "https://www.oneplus.com/content/dam/oasis/page/2024/op13/specs/op13-black.png"},
     {"brand": "OnePlus", "model": "12", "price": 680, "camera": 91, "battery": 93, "performance": 94, "display": 97, "design": 91, "img": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg"},
     {"brand": "OnePlus", "model": "12R", "price": 490, "camera": 78, "battery": 96, "performance": 92, "display": 94, "design": 88, "img": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12r.jpg"},
     {"brand": "OnePlus", "model": "Nord 4", "price": 410, "camera": 77, "battery": 94, "performance": 85, "display": 89, "design": 92, "img": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-4.jpg"},
     
     # GOOGLE
-    {"brand": "Google", "model": "Pixel 9 Pro XL", "price": 1050, "camera": 100, "battery": 86, "performance": 90, "display": 98, "design": 95, "img": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro-xl.jpg"},
-    {"brand": "Google", "model": "Pixel 9 Pro", "price": 950, "camera": 99, "battery": 84, "performance": 90, "display": 96, "design": 95, "img": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro.jpg"},
-    {"brand": "Google", "model": "Pixel 9", "price": 750, "camera": 93, "battery": 83, "performance": 88, "display": 91, "design": 92, "img": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9.jpg"},
+    {"brand": "Google", "model": "Pixel 9 Pro XL", "price": 1050, "camera": 100, "battery": 86, "performance": 90, "display": 98, "design": 95, "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Pixel_9_Pro_Vector.svg"},
+    {"brand": "Google", "model": "Pixel 9 Pro", "price": 950, "camera": 99, "battery": 84, "performance": 90, "display": 96, "design": 95, "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Pixel_9_Pro_Vector.svg"},
+    {"brand": "Google", "model": "Pixel 9", "price": 750, "camera": 93, "battery": 83, "performance": 88, "display": 91, "design": 92, "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Pixel_9_Vector.svg"},
     {"brand": "Google", "model": "Pixel 8a", "price": 460, "camera": 90, "battery": 80, "performance": 83, "display": 88, "design": 84, "img": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8a.jpg"},
     
     # XIAOMI & POCO
@@ -155,7 +155,7 @@ phones_db = [
     # REALME
     {"brand": "Realme", "model": "GT 6", "price": 530, "camera": 84, "battery": 96, "performance": 93, "display": 95, "design": 88, "img": "https://fdn2.gsmarena.com/vv/bigpic/realme-gt6.jpg"},
     {"brand": "Realme", "model": "13 Pro+", "price": 390, "camera": 83, "battery": 91, "performance": 75, "display": 90, "design": 91, "img": "https://fdn2.gsmarena.com/vv/bigpic/realme-13-pro-plus.jpg"},
-    {"brand": "Realme", "model": "C67", "price": 160, "camera": 51, "battery": 91, "performance": 48, "display": 74, "design": 76, "img": "https://fdn2.gsmarena.com/vv/bigpic/realme-c67-4g.jpg"},
+    {"brand": "Realme", "model": "C67", "price": 160, "camera": 51, "battery": 91, "performance": 48, "display": 74, "design": 76, "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Realme_C67_4G_Vector.svg"},
     
     # HONOR, NOTHING, ASUS
     {"brand": "Honor", "model": "Magic6 Pro", "price": 880, "camera": 97, "battery": 95, "performance": 96, "display": 97, "design": 94, "img": "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg"},
@@ -286,13 +286,12 @@ with tab_recommendations:
             if phone['performance'] >= 95:
                 badges_html += f'<span class="badge badge-gaming">🎮 {"ЕКСТРЕМАЛЬНА ПОТУЖНІСТЬ" if lang_code=="UA" else "EXTREME POWER" if lang_code=="EN" else "EXTRÉMNÍ VÝKON"}</span>'
 
-            # Використовуємо нативний віджет st.columns замість HTML img, щоб обійти захист від хотлінків
+            # Використовуємо нативний віджет st.image всередині st.columns для обходу захисту хотлінків
             with st.container():
                 st.markdown('<div class="phone-card">', unsafe_allow_html=True)
                 col_img, col_info = st.columns([2, 8])
                 
                 with col_img:
-                    # Нативний вивід картинки Streamlit чудово парсить GSMarena
                     st.image(phone['img'], width=110)
                     
                 with col_info:
@@ -310,7 +309,7 @@ with tab_recommendations:
                     """, unsafe_allow_html=True)
                 st.markdown('</div>', unsafe_allow_html=True)
             
-            # Нативні метрики та прогрес-бар
+            # Нативні метрики та прогрес-бар під карткою
             col_progress, col_metrics = st.columns([4, 6])
             with col_progress:
                 st.write(f"{t['match_profile']}**{phone['match']}%**")
