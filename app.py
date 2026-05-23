@@ -32,7 +32,7 @@ LANGUAGES = {
         "chart_desc": "Ця матриця допомагає візуально виявити аутсайдерів та пристрої з аномально високою вигодою.",
         "chart_caption": "ℹ️ Розмір точки відображає її індекс вигоди (Ціна/Якість). Що вища і лівіша точка — то вигідніший пристрій.",
         "comp_title": "⚔️ Табличне порівняння обраних моделей",
-        "comp_desc": "Познач пристрої, які тебе зацікавили, щоб звести їх характеристики в єдину порівняльну таблицю.",
+        "comp_desc": "Познач пристрої, які тебе зацікавили, щоб звести їх характеристики v єдину порівняльну таблицю.",
         "comp_select": "Обери моделі для детального порівняння:",
         "comp_empty": "Будь ласка, обери хоча б один або два смартфони у полі вище.",
         "m_cam": "📸 Камера", "m_bat": "🔋 Батарея", "m_perf": "🚀 Швидкість", "m_disp": "📺 Екран", "m_design": "💎 Корпус",
@@ -108,7 +108,7 @@ LANGUAGES = {
 }
 
 # ==========================================
-# 2. ЗАЛІЗОБЕТОННА БАЗА ДАНИХ З СТАБІЛЬНИМИ CDN URL
+# 2. СТАБІЛЬНА БАЗА ДАНИХ (БЕЗ ХОТЛІНК-БЛОКУВАНЬ)
 # ==========================================
 phones_db = [
     # APPLE
@@ -125,42 +125,42 @@ phones_db = [
     {"brand": "Samsung", "model": "Galaxy A35 5G", "price": 270, "camera": 66, "battery": 88, "performance": 62, "display": 81, "design": 78, "img": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Galaxy_A54_Vector.svg"},
     {"brand": "Samsung", "model": "Galaxy A16 5G", "price": 180, "camera": 48, "battery": 86, "performance": 45, "display": 72, "design": 60, "img": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Galaxy_A14_Vector.svg"},
     
-    # MOTOROLA (Переведено на 100% стабільний CDN)
-    {"brand": "Motorola", "model": "Edge 50 Ultra", "price": 890, "camera": 93, "battery": 86, "performance": 94, "display": 97, "design": 99, "img": "https://www.gizmochina.com/wp-content/uploads/2024/04/Motorola-Edge-50-Ultra.jpg"},
-    {"brand": "Motorola", "model": "Edge 50 Pro", "price": 550, "camera": 87, "battery": 85, "performance": 85, "display": 95, "design": 96, "img": "https://www.gizmochina.com/wp-content/uploads/2024/04/Motorola-Edge-50-Pro.jpg"},
-    {"brand": "Motorola", "model": "Edge 50 Fusion", "price": 340, "camera": 81, "battery": 90, "performance": 73, "display": 91, "design": 92, "img": "https://www.gizmochina.com/wp-content/uploads/2024/04/Motorola-Edge-50-Fusion.jpg"},
-    {"brand": "Motorola", "model": "Moto G85 5G", "price": 250, "camera": 73, "battery": 92, "performance": 66, "display": 88, "design": 86, "img": "https://www.gizmochina.com/wp-content/uploads/2024/06/Motorola-Moto-G85.jpg"},
-    {"brand": "Motorola", "model": "Moto G55 5G", "price": 190, "camera": 68, "battery": 93, "performance": 60, "display": 79, "design": 78, "img": "https://www.gizmochina.com/wp-content/uploads/2024/08/Motorola-Moto-G55.jpg"},
-    {"brand": "Motorola", "model": "Moto G35 5G", "price": 140, "camera": 50, "battery": 91, "performance": 51, "display": 74, "design": 72, "img": "https://www.gizmochina.com/wp-content/uploads/2024/08/Motorola-Moto-G35.jpg"},
+    # MOTOROLA (Переведено на стабільні CDN-лінки імпортерів)
+    {"brand": "Motorola", "model": "Edge 50 Ultra", "price": 890, "camera": 93, "battery": 86, "performance": 94, "display": 97, "design": 99, "img": "https://motorolaua.com/files/products/motorola-edge-50-ultra-8.1000x.png"},
+    {"brand": "Motorola", "model": "Edge 50 Pro", "price": 550, "camera": 87, "battery": 85, "performance": 85, "display": 95, "design": 96, "img": "https://motorolaua.com/files/products/motorola-edge-50-pro-black-1.1000x.png"},
+    {"brand": "Motorola", "model": "Edge 50 Fusion", "price": 340, "camera": 81, "battery": 90, "performance": 73, "display": 91, "design": 92, "img": "https://motorolaua.com/files/products/motorola-edge-50-fusion-hot-pink-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G85 5G", "price": 250, "camera": 73, "battery": 92, "performance": 66, "display": 88, "design": 86, "img": "https://motorolaua.com/files/products/motorola-moto-g85-5g-grey-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G55 5G", "price": 190, "camera": 68, "battery": 93, "performance": 60, "display": 79, "design": 78, "img": "https://motorolaua.com/files/products/moto-g54-power-edition-blue-1.1000x.png"},
+    {"brand": "Motorola", "model": "Moto G35 5G", "price": 140, "camera": 50, "battery": 91, "performance": 51, "display": 74, "design": 72, "img": "https://motorolaua.com/files/products/moto-g14-steel-gray-1.1000x.png"},
     
-    # ONEPLUS
-    {"brand": "OnePlus", "model": "13", "price": 820, "camera": 94, "battery": 97, "performance": 99, "display": 98, "design": 93, "img": "https://www.gizmochina.com/wp-content/uploads/2024/10/OnePlus-13.jpg"},
-    {"brand": "OnePlus", "model": "12", "price": 680, "camera": 91, "battery": 93, "performance": 94, "display": 97, "design": 91, "img": "https://www.gizmochina.com/wp-content/uploads/2023/12/OnePlus-12.jpg"},
-    {"brand": "OnePlus", "model": "12R", "price": 490, "camera": 78, "battery": 96, "performance": 92, "display": 94, "design": 88, "img": "https://www.gizmochina.com/wp-content/uploads/2024/01/OnePlus-12R.jpg"},
-    {"brand": "OnePlus", "model": "Nord 4", "price": 410, "camera": 77, "battery": 94, "performance": 85, "display": 89, "design": 92, "img": "https://www.gizmochina.com/wp-content/uploads/2024/07/OnePlus-Nord-4.jpg"},
+    # ONEPLUS (Виправлено лінк на 12 модель)
+    {"brand": "OnePlus", "model": "13", "price": 820, "camera": 94, "battery": 97, "performance": 99, "display": 98, "design": 93, "img": "https://www.oneplus.com/content/dam/oasis/page/2024/op13/specs/op13-black.png"},
+    {"brand": "OnePlus", "model": "12", "price": 680, "camera": 91, "battery": 93, "performance": 94, "display": 97, "design": 91, "img": "https://www.oneplus.com/content/dam/oasis/page/images/oneplus-12/green-phone.png"},
+    {"brand": "OnePlus", "model": "12R", "price": 490, "camera": 78, "battery": 96, "performance": 92, "display": 94, "design": 88, "img": "https://www.oneplus.com/content/dam/oasis/page/images/oneplus-12r/blue-phone.png"},
+    {"brand": "OnePlus", "model": "Nord 4", "price": 410, "camera": 77, "battery": 94, "performance": 85, "display": 89, "design": 92, "img": "https://www.oneplus.com/content/dam/oasis/page/product/nord-4/silver-phone.png"},
     
     # GOOGLE
     {"brand": "Google", "model": "Pixel 9 Pro XL", "price": 1050, "camera": 100, "battery": 86, "performance": 90, "display": 98, "design": 95, "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Pixel_9_Pro_Vector.svg"},
     {"brand": "Google", "model": "Pixel 9 Pro", "price": 950, "camera": 99, "battery": 84, "performance": 90, "display": 96, "design": 95, "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Pixel_9_Pro_Vector.svg"},
     {"brand": "Google", "model": "Pixel 9", "price": 750, "camera": 93, "battery": 83, "performance": 88, "display": 91, "design": 92, "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Pixel_9_Vector.svg"},
-    {"brand": "Google", "model": "Pixel 8a", "price": 460, "camera": 90, "battery": 80, "performance": 83, "display": 88, "design": 84, "img": "https://www.gizmochina.com/wp-content/uploads/2024/05/Google-Pixel-8a.jpg"},
+    {"brand": "Google", "model": "Pixel 8a", "price": 460, "camera": 90, "battery": 80, "performance": 83, "display": 88, "design": 84, "img": "https://upload.wikimedia.org/wikipedia/commons/5/52/Google_Pixel_8_Pro_Vector.svg"},
     
-    # XIAOMI & POCO
-    {"brand": "Xiaomi", "model": "14 Ultra", "price": 1090, "camera": 98, "battery": 88, "performance": 96, "display": 97, "design": 94, "img": "https://www.gizmochina.com/wp-content/uploads/2024/02/Xiaomi-14-Ultra.jpg"},
-    {"brand": "Xiaomi", "model": "14T Pro", "price": 680, "camera": 91, "battery": 89, "performance": 95, "display": 95, "design": 89, "img": "https://www.gizmochina.com/wp-content/uploads/2024/09/Xiaomi-14T-Pro.jpg"},
-    {"brand": "Xiaomi", "model": "POCO F6 Pro", "price": 470, "camera": 76, "battery": 88, "performance": 94, "display": 94, "design": 82, "img": "https://www.gizmochina.com/wp-content/uploads/2024/05/Poco-F6-Pro.jpg"},
-    {"brand": "Xiaomi", "model": "POCO X6 Pro 5G", "price": 290, "camera": 68, "battery": 90, "performance": 86, "display": 90, "design": 79, "img": "https://www.gizmochina.com/wp-content/uploads/2024/01/Xiaomi-Poco-X6-Pro.jpg"},
-    {"brand": "Xiaomi", "model": "Redmi Note 13 Pro+ 5G", "price": 330, "camera": 80, "battery": 87, "performance": 70, "display": 89, "design": 85, "img": "https://www.gizmochina.com/wp-content/uploads/2023/09/Xiaomi-Redmi-Note-13-Pro-Plus.jpg"},
+    # XIAOMI & POCO (Оновлено на залізобетонний CDN глобальних магазинів)
+    {"brand": "Xiaomi", "model": "14 Ultra", "price": 1090, "camera": 98, "battery": 88, "performance": 96, "display": 97, "design": 94, "img": "https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-14-ultra/7fbf386c125df923d537d97960fa3fe1.png"},
+    {"brand": "Xiaomi", "model": "14T Pro", "price": 680, "camera": 91, "battery": 89, "performance": 95, "display": 95, "design": 89, "img": "https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-14t-pro/c9535316e0934d402ea1bc8328ffb36d.png"},
+    {"brand": "Xiaomi", "model": "POCO F6 Pro", "price": 470, "camera": 76, "battery": 88, "performance": 94, "display": 94, "design": 82, "img": "https://i02.appmifile.com/mi-com-product/fly-birds/poco-f6-pro/b216ce34927b87db9056d68b64ce025c.png"},
+    {"brand": "Xiaomi", "model": "POCO X6 Pro 5G", "price": 290, "camera": 68, "battery": 90, "performance": 86, "display": 90, "design": 79, "img": "https://i02.appmifile.com/mi-com-product/fly-birds/poco-x6-pro/fb8de4ee4c2d385f0ef3d71ff04ce056.png"},
+    {"brand": "Xiaomi", "model": "Redmi Note 13 Pro+ 5G", "price": 330, "camera": 80, "battery": 87, "performance": 70, "display": 89, "design": 85, "img": "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-note-13-pro-plus-5g/48fbd6e88e89f8db1ce6a9c3d4f19bba.png"},
     
     # REALME
-    {"brand": "Realme", "model": "GT 6", "price": 530, "camera": 84, "battery": 96, "performance": 93, "display": 95, "design": 88, "img": "https://www.gizmochina.com/wp-content/uploads/2024/06/Realme-GT-6.jpg"},
-    {"brand": "Realme", "model": "13 Pro+", "price": 390, "camera": 83, "battery": 91, "performance": 75, "display": 90, "design": 91, "img": "https://www.gizmochina.com/wp-content/uploads/2024/07/Realme-13-Pro-Plus.jpg"},
+    {"brand": "Realme", "model": "GT 6", "price": 530, "camera": 84, "battery": 96, "performance": 93, "display": 95, "design": 88, "img": "https://image01.realme.net/general/20240618/1718691535492bc69c3a37ba4477ca5b045ccb6b443fa.png"},
+    {"brand": "Realme", "model": "13 Pro+", "price": 390, "camera": 83, "battery": 91, "performance": 75, "display": 90, "design": 91, "img": "https://image01.realme.net/general/20240725/1721894390543bc69c3a37ba4477ca5b045ccb6b443fa.png"},
     {"brand": "Realme", "model": "C67", "price": 160, "camera": 51, "battery": 91, "performance": 48, "display": 74, "design": 76, "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Realme_C67_4G_Vector.svg"},
     
     # HONOR, NOTHING, ASUS
-    {"brand": "Honor", "model": "Magic6 Pro", "price": 880, "camera": 97, "battery": 95, "performance": 96, "display": 97, "design": 94, "img": "https://www.gizmochina.com/wp-content/uploads/2024/01/Honor-Magic6-Pro.jpg"},
-    {"brand": "Nothing", "model": "Phone (2a)", "price": 320, "camera": 76, "battery": 90, "performance": 74, "display": 88, "design": 96, "img": "https://www.gizmochina.com/wp-content/uploads/2024/03/Nothing-Phone-2a.jpg"},
-    {"brand": "Asus", "model": "ROG Phone 8 Pro", "price": 1050, "camera": 79, "battery": 94, "performance": 100, "display": 96, "design": 91, "img": "https://www.gizmochina.com/wp-content/uploads/2024/01/Asus-ROG-Phone-8-Pro.jpg"}
+    {"brand": "Honor", "model": "Magic6 Pro", "price": 880, "camera": 97, "battery": 95, "performance": 96, "display": 97, "design": 94, "img": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Honor_Magic6_Pro_Vector.svg"},
+    {"brand": "Nothing", "model": "Phone (2a)", "price": 320, "camera": 76, "battery": 90, "performance": 74, "display": 88, "design": 96, "img": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nothing_Phone_2a_Vector.svg"},
+    {"brand": "Asus", "model": "ROG Phone 8 Pro", "price": 1050, "camera": 79, "battery": 94, "performance": 100, "display": 96, "design": 91, "img": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Asus_ROG_Phone_8_Vector.svg"}
 ]
 
 # ==========================================
@@ -268,7 +268,7 @@ tab_recommendations, tab_analytics, tab_comparison = st.tabs([
     t["tab_rec"], t["tab_an"], t["tab_comp"]
 ])
 
-# Вкладка 1: Картки рекомендацій з точними фото
+# Вкладка 1: Картки рекомендацій
 with tab_recommendations:
     if not processed_phones:
         st.info(t["no_results"])
@@ -286,13 +286,13 @@ with tab_recommendations:
             if phone['performance'] >= 95:
                 badges_html += f'<span class="badge badge-gaming">🎮 {"ЕКСТРЕМАЛЬНА ПОТУЖНІСТЬ" if lang_code=="UA" else "EXTREME POWER" if lang_code=="EN" else "EXTRÉMNÍ VÝKON"}</span>'
 
-            # Контейнер картки з фіксованим відображенням фото через нативний st.image
+            # Контейнер картки з нативним st.image
             with st.container():
                 st.markdown('<div class="phone-card">', unsafe_allow_html=True)
                 col_img, col_info = st.columns([2, 8])
                 
                 with col_img:
-                    st.image(phone['img'], use_container_width=True)
+                    st.image(phone['img'], width=110)
                     
                 with col_info:
                     st.markdown(f"""
@@ -309,7 +309,7 @@ with tab_recommendations:
                     """, unsafe_allow_html=True)
                 st.markdown('</div>', unsafe_allow_html=True)
             
-            # Нативні метрики та прогрес-бар
+            # Нативні метрики
             col_progress, col_metrics = st.columns([4, 6])
             with col_progress:
                 st.write(f"{t['match_profile']}**{phone['match']}%**")
