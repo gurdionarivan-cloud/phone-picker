@@ -8,7 +8,7 @@ import pandas as pd
 LANGUAGES = {
     "UA": {
         "title": "⚡ Професійна екосистема аналізу та підбору смартфонів",
-        "subtitle": "Великий інтерактивний каталог пристроїв 2026 року з розумним алгоритмом скорингу.",
+        "subtitle": "Величезний інтерактивний каталог пристроїв з розумним алгоритмом скорингу.",
         "sidebar_header": "🎛️ Панель керування",
         "budget": "💰 Граничний бюджет ($)",
         "brands": "🏷️ Вибір брендів (усі, якщо порожньо)",
@@ -41,7 +41,7 @@ LANGUAGES = {
     },
     "EN": {
         "title": "⚡ Professional Smartphone Analyzer & Picker",
-        "subtitle": "Massive 2026 device catalog driven by smart weighted scoring algorithms.",
+        "subtitle": "Massive device catalog driven by smart weighted scoring algorithms.",
         "sidebar_header": "🎛️ Control Panel",
         "budget": "💰 Maximum Budget ($)",
         "brands": "🏷️ Brand Selection (all if empty)",
@@ -74,7 +74,7 @@ LANGUAGES = {
     },
     "CZ": {
         "title": "⚡ Profesionální ekosystém analýzy a výběru smartphonů",
-        "subtitle": "Masivní katalog zařízení pro rok 2026 s inteligentním algoritmem skórování.",
+        "subtitle": "Masivní katalog reálných zařízení s inteligentním algoritmem skórování.",
         "sidebar_header": "🎛️ Ovládací panel",
         "budget": "💰 Maximální rozpočet ($)",
         "brands": "🏷️ Výběr značek (všechny pokud prázdné)",
@@ -108,62 +108,60 @@ LANGUAGES = {
 }
 
 # ==========================================
-# 2. ВЕЛИЧЕЗНА БАЗА ДАНИХ (40 МОДЕЛЕЙ З URL ФОТО)
+# 2. ОНОВЛЕНА РЕАЛЬНА БАЗА ДАНИХ (ТОЧНІ КАРТИНКИ)
 # ==========================================
-phones_json = """
-[
-    {"brand": "Apple", "model": "iPhone 17 Pro Max", "price": 1400, "camera": 100, "battery": 92, "performance": 100, "display": 99, "design": 100, "img": "https://img.imagesia.com/images/2026/05/23/iphone17promax.png"},
-    {"brand": "Apple", "model": "iPhone 17 Pro", "price": 1150, "camera": 98, "battery": 87, "performance": 100, "display": 98, "design": 98, "img": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=300"},
-    {"brand": "Apple", "model": "iPhone 17", "price": 850, "camera": 88, "battery": 82, "performance": 90, "display": 88, "design": 94, "img": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300"},
-    {"brand": "Apple", "model": "iPhone 15", "price": 650, "camera": 84, "battery": 78, "performance": 85, "display": 84, "design": 90, "img": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=300"},
-    {"brand": "Apple", "model": "iPhone SE 4 (2025)", "price": 500, "camera": 79, "battery": 75, "performance": 89, "display": 80, "design": 82, "img": "https://images.unsplash.com/photo-1565630916779-e303be97b6f5?w=300"},
+phones_db = [
+    # APPLE
+    {"brand": "Apple", "model": "iPhone 16 Pro Max", "price": 1250, "camera": 98, "battery": 90, "performance": 98, "display": 99, "design": 98, "img": "https://images.officialrenders.com/smartphones/apple/iphone-16-pro-max.png"},
+    {"brand": "Apple", "model": "iPhone 16 Pro", "price": 1050, "camera": 97, "battery": 85, "performance": 98, "display": 98, "design": 98, "img": "https://images.officialrenders.com/smartphones/apple/iphone-16-pro.png"},
+    {"brand": "Apple", "model": "iPhone 16", "price": 820, "camera": 87, "battery": 80, "performance": 89, "display": 85, "design": 93, "img": "https://images.officialrenders.com/smartphones/apple/iphone-16.png"},
+    {"brand": "Apple", "model": "iPhone 15", "price": 680, "camera": 84, "battery": 78, "performance": 83, "display": 84, "design": 90, "img": "https://images.officialrenders.com/smartphones/apple/iphone-15.png"},
     
-    {"brand": "Samsung", "model": "Galaxy S26 Ultra", "price": 1350, "camera": 99, "battery": 94, "performance": 99, "display": 100, "design": 97, "img": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300"},
-    {"brand": "Samsung", "model": "Galaxy S26+", "price": 1000, "camera": 92, "battery": 89, "performance": 95, "display": 97, "design": 94, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"},
-    {"brand": "Samsung", "model": "Galaxy S26", "price": 800, "camera": 90, "battery": 83, "performance": 95, "display": 95, "design": 93, "img": "https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=300"},
-    {"brand": "Samsung", "model": "Galaxy A56 5G", "price": 390, "camera": 78, "battery": 91, "performance": 76, "display": 88, "design": 84, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Samsung", "model": "Galaxy A36", "price": 280, "camera": 68, "battery": 90, "performance": 64, "display": 83, "design": 75, "img": "https://images.unsplash.com/photo-1565630916779-e303be97b6f5?w=300"},
-    {"brand": "Samsung", "model": "Galaxy A16 5G", "price": 170, "camera": 48, "battery": 86, "performance": 45, "display": 72, "design": 60, "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300"},
+    # SAMSUNG
+    {"brand": "Samsung", "model": "Galaxy S26 Ultra", "price": 1350, "camera": 99, "battery": 94, "performance": 99, "display": 100, "design": 97, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-s26-ultra.png"},
+    {"brand": "Samsung", "model": "Galaxy S26+", "price": 1000, "camera": 92, "battery": 89, "performance": 95, "display": 97, "design": 94, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-s26-plus.png"},
+    {"brand": "Samsung", "model": "Galaxy S25", "price": 750, "camera": 89, "battery": 82, "performance": 93, "display": 95, "design": 92, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-s25.png"},
+    {"brand": "Samsung", "model": "Galaxy A55 5G", "price": 370, "camera": 75, "battery": 89, "performance": 71, "display": 86, "design": 83, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-a55.png"},
+    {"brand": "Samsung", "model": "Galaxy A35 5G", "price": 270, "camera": 66, "battery": 88, "performance": 62, "display": 81, "design": 78, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-a35.png"},
+    {"brand": "Samsung", "model": "Galaxy A16 5G", "price": 180, "camera": 48, "battery": 86, "performance": 45, "display": 72, "design": 60, "img": "https://images.officialrenders.com/smartphones/samsung/galaxy-a16.png"},
     
-    {"brand": "Google", "model": "Pixel 10 Pro XL", "price": 1100, "camera": 100, "battery": 88, "performance": 93, "display": 98, "design": 95, "img": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300"},
-    {"brand": "Google", "model": "Pixel 10", "price": 800, "camera": 95, "battery": 85, "performance": 91, "display": 93, "design": 91, "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"},
-    {"brand": "Google", "model": "Pixel 9a", "price": 490, "camera": 92, "battery": 82, "performance": 84, "display": 90, "design": 85, "img": "https://images.unsplash.com/photo-1565630916779-e303be97b6f5?w=300"},
+    # MOTOROLA (Суттєво розширено)
+    {"brand": "Motorola", "model": "Edge 50 Ultra", "price": 890, "camera": 93, "battery": 86, "performance": 94, "display": 97, "design": 99, "img": "https://images.officialrenders.com/smartphones/motorola/edge-50-ultra.png"},
+    {"brand": "Motorola", "model": "Edge 50 Pro", "price": 550, "camera": 87, "battery": 85, "performance": 85, "display": 95, "design": 96, "img": "https://images.officialrenders.com/smartphones/motorola/edge-50-pro.png"},
+    {"brand": "Motorola", "model": "Edge 50 Fusion", "price": 340, "camera": 81, "battery": 90, "performance": 73, "display": 91, "design": 92, "img": "https://images.officialrenders.com/smartphones/motorola/edge-50-fusion.png"},
+    {"brand": "Motorola", "model": "Moto G85 5G", "price": 250, "camera": 73, "battery": 92, "performance": 66, "display": 88, "design": 86, "img": "https://images.officialrenders.com/smartphones/motorola/moto-g85.png"},
+    {"brand": "Motorola", "model": "Moto G55 5G", "price": 190, "camera": 68, "battery": 93, "performance": 60, "display": 79, "design": 78, "img": "https://images.officialrenders.com/smartphones/motorola/moto-g55.png"},
+    {"brand": "Motorola", "model": "Moto G35 5G", "price": 140, "camera": 50, "battery": 91, "performance": 51, "display": 74, "design": 72, "img": "https://images.officialrenders.com/smartphones/motorola/moto-g35.png"},
     
-    {"brand": "Xiaomi", "model": "16 Ultra", "price": 1150, "camera": 99, "battery": 90, "performance": 98, "display": 98, "design": 93, "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"},
-    {"brand": "Xiaomi", "model": "16 Pro", "price": 900, "camera": 94, "battery": 91, "performance": 98, "display": 96, "design": 90, "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300"},
-    {"brand": "Xiaomi", "model": "POCO F8 Pro", "price": 520, "camera": 78, "battery": 92, "performance": 97, "display": 95, "design": 83, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Xiaomi", "model": "POCO X8 Pro", "price": 340, "camera": 70, "battery": 94, "performance": 85, "display": 91, "design": 78, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"},
-    {"brand": "Xiaomi", "model": "Redmi Note 15 Pro+", "price": 350, "camera": 81, "battery": 89, "performance": 72, "display": 89, "design": 85, "img": "https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=300"},
-    {"brand": "Xiaomi", "model": "Redmi 15 entry", "price": 130, "camera": 40, "battery": 92, "performance": 42, "display": 68, "design": 58, "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300"},
+    # ONEPLUS (Реальні актуальні моделі)
+    {"brand": "OnePlus", "model": "13", "price": 820, "camera": 94, "battery": 97, "performance": 99, "display": 98, "design": 93, "img": "https://images.officialrenders.com/smartphones/oneplus/oneplus-13.png"},
+    {"brand": "OnePlus", "model": "12", "price": 680, "camera": 91, "battery": 93, "performance": 94, "display": 97, "design": 91, "img": "https://images.officialrenders.com/smartphones/oneplus/oneplus-12.png"},
+    {"brand": "OnePlus", "model": "12R", "price": 490, "camera": 78, "battery": 96, "performance": 92, "display": 94, "design": 88, "img": "https://images.officialrenders.com/smartphones/oneplus/oneplus-12r.png"},
+    {"brand": "OnePlus", "model": "Nord 4", "price": 410, "camera": 77, "battery": 94, "performance": 85, "display": 89, "design": 92, "img": "https://images.officialrenders.com/smartphones/oneplus/nord-4.png"},
     
-    {"brand": "Motorola", "model": "Edge 70 Ultra", "price": 950, "camera": 93, "battery": 88, "performance": 96, "display": 97, "design": 98, "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"},
-    {"brand": "Motorola", "model": "Edge 70 Pro", "price": 650, "camera": 89, "battery": 87, "performance": 91, "display": 95, "design": 96, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"},
-    {"brand": "Motorola", "model": "Edge 70 Fusion", "price": 430, "camera": 83, "battery": 91, "performance": 80, "display": 93, "design": 95, "img": "https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=300"},
-    {"brand": "Motorola", "model": "Moto G86 5G", "price": 270, "camera": 72, "battery": 95, "performance": 68, "display": 86, "design": 85, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Motorola", "model": "Moto G36", "price": 160, "camera": 52, "battery": 93, "performance": 55, "display": 75, "design": 74, "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300"},
+    # GOOGLE
+    {"brand": "Google", "model": "Pixel 9 Pro XL", "price": 1050, "camera": 100, "battery": 86, "performance": 90, "display": 98, "design": 95, "img": "https://images.officialrenders.com/smartphones/google/pixel-9-pro-xl.png"},
+    {"brand": "Google", "model": "Pixel 9 Pro", "price": 950, "camera": 99, "battery": 84, "performance": 90, "display": 96, "design": 95, "img": "https://images.officialrenders.com/smartphones/google/pixel-9-pro.png"},
+    {"brand": "Google", "model": "Pixel 9", "price": 750, "camera": 93, "battery": 83, "performance": 88, "display": 91, "design": 92, "img": "https://images.officialrenders.com/smartphones/google/pixel-9.png"},
+    {"brand": "Google", "model": "Pixel 8a", "price": 460, "camera": 90, "battery": 80, "performance": 83, "display": 88, "design": 84, "img": "https://images.officialrenders.com/smartphones/google/pixel-8a.png"},
     
-    {"brand": "OnePlus", "model": "14 Pro", "price": 1000, "camera": 96, "battery": 95, "performance": 99, "display": 98, "design": 94, "img": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300"},
-    {"brand": "OnePlus", "model": "14R", "price": 550, "camera": 84, "battery": 98, "performance": 95, "display": 94, "design": 89, "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"},
-    {"brand": "OnePlus", "model": "Nord 5", "price": 440, "camera": 78, "battery": 93, "performance": 86, "display": 90, "design": 88, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"},
+    # XIAOMI & POCO
+    {"brand": "Xiaomi", "model": "14 Ultra", "price": 1090, "camera": 98, "battery": 88, "performance": 96, "display": 97, "design": 94, "img": "https://images.officialrenders.com/smartphones/xiaomi/xiaomi-14-ultra.png"},
+    {"brand": "Xiaomi", "model": "14T Pro", "price": 680, "camera": 91, "battery": 89, "performance": 95, "display": 95, "design": 89, "img": "https://images.officialrenders.com/smartphones/xiaomi/xiaomi-14t-pro.png"},
+    {"brand": "Xiaomi", "model": "POCO F6 Pro", "price": 470, "camera": 76, "battery": 88, "performance": 94, "display": 94, "design": 82, "img": "https://images.officialrenders.com/smartphones/xiaomi/poco-f6-pro.png"},
+    {"brand": "Xiaomi", "model": "POCO X6 Pro 5G", "price": 290, "camera": 68, "battery": 90, "performance": 86, "display": 90, "design": 79, "img": "https://images.officialrenders.com/smartphones/xiaomi/poco-x6-pro.png"},
+    {"brand": "Xiaomi", "model": "Redmi Note 13 Pro+ 5G", "price": 330, "camera": 80, "battery": 87, "performance": 70, "display": 89, "design": 85, "img": "https://images.officialrenders.com/smartphones/xiaomi/redmi-note-13-pro-plus.png"},
     
-    {"brand": "Realme", "model": "GT 7 Pro", "price": 700, "camera": 86, "battery": 100, "performance": 98, "display": 96, "design": 88, "img": "https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=300"},
-    {"brand": "Realme", "model": "14 Pro+ 5G", "price": 400, "camera": 85, "battery": 91, "performance": 78, "display": 92, "design": 93, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Realme", "model": "C67 alternative", "price": 150, "camera": 50, "battery": 90, "performance": 50, "display": 74, "design": 76, "img": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300"},
+    # REALME
+    {"brand": "Realme", "model": "GT 6", "price": 530, "camera": 84, "battery": 96, "performance": 93, "display": 95, "design": 88, "img": "https://images.officialrenders.com/smartphones/realme/realme-gt-6.png"},
+    {"brand": "Realme", "model": "13 Pro+", "price": 390, "camera": 83, "battery": 91, "performance": 75, "display": 90, "design": 91, "img": "https://images.officialrenders.com/smartphones/realme/realme-13-pro-plus.png"},
+    {"brand": "Realme", "model": "C67", "price": 160, "camera": 51, "battery": 91, "performance": 48, "display": 74, "design": 76, "img": "https://images.officialrenders.com/smartphones/realme/realme-c67.png"},
     
-    {"brand": "Honor", "model": "Magic7 Pro", "price": 1050, "camera": 98, "battery": 94, "performance": 98, "display": 97, "design": 96, "img": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300"},
-    {"brand": "Honor", "model": "200 Pro", "price": 550, "camera": 90, "battery": 88, "performance": 86, "display": 93, "design": 91, "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"},
-    
-    {"brand": "Asus", "model": "ROG Phone 10", "price": 1200, "camera": 78, "battery": 96, "performance": 100, "display": 97, "design": 92, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Nothing", "model": "Phone (3)", "price": 600, "camera": 86, "battery": 85, "performance": 89, "display": 92, "design": 100, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"},
-    {"brand": "Nothing", "model": "CMF Phone 2", "price": 240, "camera": 62, "battery": 89, "performance": 67, "display": 85, "design": 95, "img": "https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=300"},
-    
-    {"brand": "Sony", "model": "Xperia 1 VII", "price": 1300, "camera": 96, "battery": 85, "performance": 98, "display": 99, "design": 95, "img": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300"},
-    
-    {"brand": "Tecno", "model": "Camon 40 Pro", "price": 320, "camera": 80, "battery": 92, "performance": 73, "display": 89, "design": 87, "img": "https://images.unsplash.com/photo-1601784551446-20c9e096b21a?w=300"},
-    {"brand": "Infinix", "model": "GT 30 Pro", "price": 350, "camera": 74, "battery": 93, "performance": 84, "display": 91, "design": 92, "img": "https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=300"}
+    # HONOR, NOTHING, ASUS
+    {"brand": "Honor", "model": "Magic6 Pro", "price": 880, "camera": 97, "battery": 95, "performance": 96, "display": 97, "design": 94, "img": "https://images.officialrenders.com/smartphones/honor/magic6-pro.png"},
+    {"brand": "Nothing", "model": "Phone (2a)", "price": 320, "camera": 76, "battery": 90, "performance": 74, "display": 88, "design": 96, "img": "https://images.officialrenders.com/smartphones/nothing/phone-2a.png"},
+    {"brand": "Asus", "model": "ROG Phone 8 Pro", "price": 1050, "camera": 79, "battery": 94, "performance": 100, "display": 96, "design": 91, "img": "https://images.officialrenders.com/smartphones/asus/rog-phone-8-pro.png"}
 ]
-"""
-phones_db = json.loads(phones_json)
 
 # ==========================================
 # 3. НАЛАШТУВАННЯ СТОРІНКИ ТА CSS СТИЛІ
@@ -270,7 +268,7 @@ tab_recommendations, tab_analytics, tab_comparison = st.tabs([
     t["tab_rec"], t["tab_an"], t["tab_comp"]
 ])
 
-# Вкладка 1: Картки рекомендацій з ФОТО
+# Вкладка 1: Картки рекомендацій з точними фото
 with tab_recommendations:
     if not processed_phones:
         st.info(t["no_results"])
@@ -285,15 +283,14 @@ with tab_recommendations:
                 badges_html += f'<span class="badge badge-value">💎 {"ТОП ЗА СВОЇ ГРОШІ" if lang_code=="UA" else "BEST VALUE" if lang_code=="EN" else "TOP ZA TY PENÍZE"}</span>'
             if phone['camera'] >= 95:
                 badges_html += f'<span class="badge badge-camera">📸 {"КАМЕРОФОН" if lang_code=="UA" else "CAMERAPHONE" if lang_code=="EN" else "FOTOMOBIL"}</span>'
-            if phone['performance'] >= 96:
+            if phone['performance'] >= 95:
                 badges_html += f'<span class="badge badge-gaming">🎮 {"ЕКСТРЕМАЛЬНА ПОТУЖНІСТЬ" if lang_code=="UA" else "EXTREME POWER" if lang_code=="EN" else "EXTRÉMNÍ VÝKON"}</span>'
 
-            # Верстка картки: зліва фото, справа характеристики
             st.markdown(f"""
             <div class="phone-card">
                 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                    <div style="flex: 1; min-width: 120px; max-width: 150px; text-align: center;">
-                        <img src="{phone['img']}" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div style="flex: 1; min-width: 100px; max-width: 130px; text-align: center;">
+                        <img src="{phone['img']}" style="max-width: 100%; height: auto; border-radius: 8px;" onerror="this.src='https://images.officialrenders.com/smartphones/generic-phone.png'">
                     </div>
                     <div style="flex: 4; min-width: 250px;">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
@@ -311,7 +308,6 @@ with tab_recommendations:
             </div>
             """, unsafe_allow_html=True)
             
-            # Нативні метрики та прогрес-бар під кожною карткою
             col_progress, col_metrics = st.columns([4, 6])
             with col_progress:
                 st.write(f"{t['match_profile']}**{phone['match']}%**")
